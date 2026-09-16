@@ -1,0 +1,5 @@
+/mvnw text eol=lf
+*.cmd text eol=crlf
+
+# The scanner output is committed as an example; keep it out of diff noise.
+out/*.json linguist-generated=true

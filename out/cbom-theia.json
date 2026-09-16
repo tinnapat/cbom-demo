@@ -1,0 +1,344 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:3734adc7-0359-46ce-a3d6-28383f9c87cb",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-09-12T22:24:46+07:00",
+    "tools": {
+      "services": [
+        {
+          "provider": {
+            "name": "PQCA"
+          },
+          "name": "cbomkit-theia",
+          "version": "edge",
+          "services": [
+            {
+              "name": "Certificate File Plugin"
+            },
+            {
+              "name": "Secret Detection Plugin"
+            },
+            {
+              "name": "OpenSSL Config Plugin"
+            },
+            {
+              "name": "Problematic CA Detection Plugin"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "5654bf2f-9122-4cce-9878-a949957ac47d",
+      "type": "cryptographic-asset",
+      "name": "ECDSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-root-ca.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "bom-ref": "1305c564-7cac-4fad-b5a4-f19ad2454021",
+      "type": "cryptographic-asset",
+      "name": "SHA256",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-root-ca.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256",
+          "cryptoFunctions": [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "bcbf5117-07a0-4875-9b7a-22e0f7b6dff4",
+      "type": "cryptographic-asset",
+      "name": "ECDSA-SHA256",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-root-ca.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "256",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.10045.4.3.2"
+      }
+    },
+    {
+      "bom-ref": "a6b3e86c-1a4a-4a7f-8fd1-7a6d233ac98f",
+      "type": "cryptographic-asset",
+      "name": "ECDSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-root-ca.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "bom-ref": "bee855ff-32c5-4369-ba7c-93c63ecf0e29",
+      "type": "cryptographic-asset",
+      "name": "ECDSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-root-ca.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "public-key",
+          "algorithmRef": "a6b3e86c-1a4a-4a7f-8fd1-7a6d233ac98f",
+          "value": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpkiHdqTBd0w8siHYR3lYNK6902FOg7if0T9iNQRtrLUDXG7Woof4l7zZ8I98A3HEK0q5ZqlHD0LdPXDQ/wDCzQ==",
+          "format": "PEM"
+        },
+        "oid": "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "bom-ref": "e1e004d1-bbd1-48d6-a5c5-3676da1127d3",
+      "type": "cryptographic-asset",
+      "name": "CBOM Demo Root CA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-root-ca.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "certificateProperties": {
+          "subjectName": "CBOM Demo Root CA",
+          "issuerName": "CBOM Demo Root CA",
+          "notValidBefore": "2026-09-11T15:12:58Z",
+          "notValidAfter": "2027-09-12T15:12:58Z",
+          "signatureAlgorithmRef": "bcbf5117-07a0-4875-9b7a-22e0f7b6dff4",
+          "subjectPublicKeyRef": "bee855ff-32c5-4369-ba7c-93c63ecf0e29",
+          "certificateFormat": "X.509",
+          "certificateExtension": "crt"
+        }
+      }
+    },
+    {
+      "bom-ref": "5bded9fb-e398-411d-9034-eb7048dd81f1",
+      "type": "cryptographic-asset",
+      "name": "ECDSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-server.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "bom-ref": "431bc267-44d8-49bf-a3d2-83bdd1015fe5",
+      "type": "cryptographic-asset",
+      "name": "SHA256",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-server.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256",
+          "cryptoFunctions": [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "47e06f03-ffc8-4d0f-bb44-1e79cb856359",
+      "type": "cryptographic-asset",
+      "name": "ECDSA-SHA256",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-server.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "256",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.10045.4.3.2"
+      }
+    },
+    {
+      "bom-ref": "989df18e-9417-423b-a454-2d33b4368350",
+      "type": "cryptographic-asset",
+      "name": "ECDSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-server.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "bom-ref": "0b65372b-4a93-4198-9e1b-0a0654c51746",
+      "type": "cryptographic-asset",
+      "name": "ECDSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-server.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "public-key",
+          "algorithmRef": "989df18e-9417-423b-a454-2d33b4368350",
+          "value": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEPSv+qyiJTICMeKiPyf/h7TDLByaGWiYHaQ+AeuWNzZROtzR5IvBS6w+0/2Hx13qwajaPFq4vrcyi4kd7MOkTFA==",
+          "format": "PEM"
+        },
+        "oid": "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "bom-ref": "6c48995b-0daa-4529-941d-7835419d9e4d",
+      "type": "cryptographic-asset",
+      "name": "localhost",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-server.crt"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "certificateProperties": {
+          "subjectName": "localhost",
+          "issuerName": "CBOM Demo Root CA",
+          "notValidBefore": "2026-09-11T15:12:58Z",
+          "notValidAfter": "2027-09-12T15:12:58Z",
+          "signatureAlgorithmRef": "47e06f03-ffc8-4d0f-bb44-1e79cb856359",
+          "subjectPublicKeyRef": "0b65372b-4a93-4198-9e1b-0a0654c51746",
+          "certificateFormat": "X.509",
+          "certificateExtension": "crt"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "pkcs12-file",
+      "description": "Found a PKCS #12 file, which commonly contain bundled private keys.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "target/demo-pki/demo-keystore.p12",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "unknown"
+        }
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "bcbf5117-07a0-4875-9b7a-22e0f7b6dff4",
+      "dependsOn": [
+        "5654bf2f-9122-4cce-9878-a949957ac47d",
+        "1305c564-7cac-4fad-b5a4-f19ad2454021"
+      ]
+    },
+    {
+      "ref": "47e06f03-ffc8-4d0f-bb44-1e79cb856359",
+      "dependsOn": [
+        "5bded9fb-e398-411d-9034-eb7048dd81f1",
+        "431bc267-44d8-49bf-a3d2-83bdd1015fe5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6232 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:6ed64de0-944b-482a-80cd-d3bf4217cb7d",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-09-12T15:33:45Z",
+    "tools" : {
+      "services" : [
+        {
+          "provider" : {
+            "name" : "IBM"
+          },
+          "name" : "Sonar Cryptography Plugin",
+          "version" : "2.0.0-SNAPSHOT"
+        }
+      ]
+    }
+  },
+  "components" : [
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "67856e4e-1b08-4480-ae41-c70822b64b3d",
+      "name" : "secret-key@67856e4e-1b08-4480-ae41-c70822b64b3d",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 124,
+            "offset" : 31,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "6d1641a6-2d38-412d-a5f5-a4b7763b1291",
+      "name" : "secret-key@6d1641a6-2d38-412d-a5f5-a4b7763b1291",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 35,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "ed8528e7-93bd-450a-bed9-e3aeb634a179",
+      "name" : "AES-GCM",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcAeadCipherDemo.java",
+            "line" : 50,
+            "offset" : 49,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 56,
+            "offset" : 48,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "ae",
+          "parameterSetIdentifier" : "128",
+          "mode" : "gcm",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "28c0e09a-1780-4eef-aeec-51b5581010f3",
+      "name" : "AES-128-GCM",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 54,
+            "offset" : 18,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "ae",
+          "parameterSetIdentifier" : "128",
+          "mode" : "gcm",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "35cf3623-b598-4c48-b555-b5e66ace1b5a",
+      "name" : "key@35cf3623-b598-4c48-b555-b5e66ace1b5a",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 39,
+            "offset" : 20
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "be628997-1207-426a-9004-12e305fc22b3",
+      "name" : "secret-key@be628997-1207-426a-9004-12e305fc22b3",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "672ddec5-ae0f-4ece-a695-cd48ac738bc7",
+      "name" : "salt@672ddec5-ae0f-4ece-a695-cd48ac738bc7",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 136
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "ee1f541f-99fe-4a85-a49b-59033dad54f4",
+      "name" : "RSA-PKCS1-1.5-SHA-256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 72,
+            "offset" : 22,
+            "additionalContext" : "org.bouncycastle.crypto.signers.RSADigestSigner#<init>(Lorg/bouncycastle/crypto/Digest;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 77,
+            "offset" : 24,
+            "additionalContext" : "org.bouncycastle.crypto.signers.RSADigestSigner#<init>(Lorg/bouncycastle/crypto/Digest;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 37,
+            "offset" : 16
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "signature",
+          "cryptoFunctions" : [
+            "sign"
+          ]
+        },
+        "oid" : "1.2.840.113549.1.1.11"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "5891e29a-985d-4f59-82a3-badcd72ae151",
+      "name" : "key@5891e29a-985d-4f59-82a3-badcd72ae151",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 92,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "6fca114c-7e98-4c09-8d19-d02e21e8ef86",
+      "name" : "RSA",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 86,
+            "offset" : 36,
+            "additionalContext" : "org.bouncycastle.crypto.engines.RSAEngine#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 91,
+            "offset" : 38,
+            "additionalContext" : "org.bouncycastle.crypto.engines.RSAEngine#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 75,
+            "offset" : 3,
+            "additionalContext" : "javax.net.ssl.SSLServerSocket#setEnabledCipherSuites([Ljava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke"
+        },
+        "oid" : "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "8a92d78d-2636-4cf5-8bcd-247eb6fa29f6",
+      "name" : "key@8a92d78d-2636-4cf5-8bcd-247eb6fa29f6",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 36,
+            "offset" : 18
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "311a7510-754c-43a0-8b0f-112f489c033b",
+      "name" : "EC-secp384r1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 34,
+            "offset" : 17
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 36,
+            "offset" : 37
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "curve" : "secp384r1",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "2cf68413-4c67-49d6-8b01-f53581eb30e6",
+      "name" : "password@2cf68413-4c67-49d6-8b01-f53581eb30e6",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 144
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "57ae517c-02d6-410e-98a4-298f80173e3e",
+      "name" : "key@57ae517c-02d6-410e-98a4-298f80173e3e",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 73,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 2048
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "aa38e037-7f91-431a-8b24-f3a95705bf58",
+      "name" : "password@aa38e037-7f91-431a-8b24-f3a95705bf58",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 144
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "4e3af533-5757-4828-8fde-83a457cba985",
+      "name" : "key@4e3af533-5757-4828-8fde-83a457cba985",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 169,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 3072
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d636cb6f-2d17-4c46-9519-7520c37751a8",
+      "name" : "salt@d636cb6f-2d17-4c46-9519-7520c37751a8",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcDigestDemo.java",
+            "line" : 33,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.digests.Blake2bDigest#<init>(I)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 128
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "357e45ba-cc57-41f3-9af1-f3e6610e8966",
+      "name" : "key@357e45ba-cc57-41f3-9af1-f3e6610e8966",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 39,
+            "offset" : 20
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d2716e16-73d8-4f21-aed2-8218d4d9837b",
+      "name" : "AES-128-CBC-PKCS5",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 64,
+            "offset" : 18,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "128",
+          "mode" : "cbc",
+          "padding" : "pkcs5",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "4ea4cd9d-0c27-45e5-a591-07b849f574d0",
+      "name" : "password@4ea4cd9d-0c27-45e5-a591-07b849f574d0",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 144
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "53347226-54dd-4db2-873e-b9f68ff12c7b",
+      "name" : "SHA3-256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 26,
+            "offset" : 28
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaDigestDemo.java",
+            "line" : 28,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.8"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "185f3854-2392-4c8e-90ec-2ff1c3745404",
+      "name" : "password@185f3854-2392-4c8e-90ec-2ff1c3745404",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 144
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "8a9c6611-74eb-419e-8397-3ac7052aa91f",
+      "name" : "FFDH-3072",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 78,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.KeyAgreement#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyAgreement;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "parameterSetIdentifier" : "3072"
+        },
+        "oid" : "1.2.840.113549.1.3.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "9d902dee-da8a-4dd3-b6a2-9066ca73910a",
+      "name" : "key@9d902dee-da8a-4dd3-b6a2-9066ca73910a",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 43,
+            "offset" : 16
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "b02f8b2c-f76a-4aba-9647-8fa697425c89",
+      "name" : "AES-256-GCM",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 75,
+            "offset" : 3,
+            "additionalContext" : "javax.net.ssl.SSLServerSocket#setEnabledCipherSuites([Ljava/lang/String;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 92,
+            "offset" : 3,
+            "additionalContext" : "javax.net.ssl.SSLServerSocket#setEnabledCipherSuites([Ljava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "256",
+          "mode" : "gcm"
+        },
+        "oid" : "2.16.840.1.101.3.4.1.46"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "9d8c9f43-2849-4eae-be72-336235cbd1ed",
+      "name" : "key@9d8c9f43-2849-4eae-be72-336235cbd1ed",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 25,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "2bba398b-5c49-4cac-ba8e-9ceb70e951a4",
+      "name" : "salt@2bba398b-5c49-4cac-ba8e-9ceb70e951a4",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 136
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "da353bc7-9fb6-4701-ae98-996ec64a0203",
+      "name" : "password@da353bc7-9fb6-4701-ae98-996ec64a0203",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 160
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "9cb59b27-7f63-4491-87e7-731cbaf1283c",
+      "name" : "KMAC256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 62,
+            "offset" : 16,
+            "additionalContext" : "org.bouncycastle.crypto.macs.KMAC#<init>(I[B)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "mac",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "tag"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "5b2585ac-b000-4a22-86b4-2e5976783447",
+      "name" : "key@5b2585ac-b000-4a22-86b4-2e5976783447",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 82,
+            "offset" : 31,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "9dcdcf35-8612-48ca-b705-7872bf5e538d",
+      "name" : "key@9dcdcf35-8612-48ca-b705-7872bf5e538d",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 39,
+            "offset" : 20
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "5ddec7a5-5fd3-47ce-af7d-ea06f7896929",
+      "name" : "key@5ddec7a5-5fd3-47ce-af7d-ea06f7896929",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 36,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "6e09f030-05d5-4cb1-9d7a-a18224edb7fd",
+      "name" : "secret-key@6e09f030-05d5-4cb1-9d7a-a18224edb7fd",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 54,
+            "offset" : 29,
+            "additionalContext" : "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 200
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "6e408ff7-c8c6-4cff-bd7e-624dc2305588",
+      "name" : "SHA3-384",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcDigestDemo.java",
+            "line" : 30,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA384Digest#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "384",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.9"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "cc7ac79b-8ac9-4b48-ba5b-a61000b72d66",
+      "name" : "salt@cc7ac79b-8ac9-4b48-ba5b-a61000b72d66",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 136
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "c76472ef-3c63-4f73-a10f-05a1e5bbd45d",
+      "name" : "key@c76472ef-3c63-4f73-a10f-05a1e5bbd45d",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 36,
+            "offset" : 18
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "93a0b6b0-b348-4681-87b6-91dc034f3257",
+      "name" : "salt@93a0b6b0-b348-4681-87b6-91dc034f3257",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 87,
+            "offset" : 26,
+            "additionalContext" : "java.security.spec.PSSParameterSpec#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;II)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 256
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "431e51af-5db7-498b-9b55-f0f54b3d7094",
+      "name" : "key@431e51af-5db7-498b-9b55-f0f54b3d7094",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e9948e91-d799-4dbe-bf1f-c5a2bac467ef",
+      "name" : "ChaCha20",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 82,
+            "offset" : 31,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 86,
+            "offset" : 19,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 35,
+            "offset" : 22
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "stream-cipher",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e31856d8-39d1-4b15-b89d-636566574011",
+      "name" : "salt@e31856d8-39d1-4b15-b89d-636566574011",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 93,
+            "offset" : 28,
+            "additionalContext" : "java.security.spec.PSSParameterSpec#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;II)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 256
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "079d7ef9-03cf-47d0-bb14-3bae10ca0b49",
+      "name" : "key@079d7ef9-03cf-47d0-bb14-3bae10ca0b49",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 26,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "43d2067f-71fa-4dcb-93b4-00924e8ae2c6",
+      "name" : "PBKDF2-HMAC-SHA-1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 35,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kdf",
+          "cryptoFunctions" : [
+            "keyderive"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e46678bc-1b7e-4c04-b052-dcdddc62b94f",
+      "name" : "RSA-4096",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 38,
+            "offset" : 23
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "parameterSetIdentifier" : "4096",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f47bf9a6-8309-418f-a7d0-00da0d9e1313",
+      "name" : "HKDF-SHA-256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKdfDemo.java",
+            "line" : 45,
+            "offset" : 37,
+            "additionalContext" : "org.bouncycastle.crypto.generators.HKDFBytesGenerator#<init>(Lorg/bouncycastle/crypto/Digest;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kdf"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "9e826b20-90aa-4f56-8eff-e792bb2cb622",
+      "name" : "ML-DSA-65",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 42,
+            "offset" : 24
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 124,
+            "offset" : 39,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 127,
+            "offset" : 22,
+            "additionalContext" : "java.security.Signature#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 132,
+            "offset" : 24,
+            "additionalContext" : "java.security.Signature#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "signature",
+          "parameterSetIdentifier" : "65",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.3.18"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "590b4f56-5f24-4cec-8651-419399a1e0ba",
+      "name" : "RSA-1024",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 47,
+            "offset" : 23
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "parameterSetIdentifier" : "1024",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "48a07d2c-bc43-47c3-8084-712bf606eec8",
+      "name" : "key@48a07d2c-bc43-47c3-8084-712bf606eec8",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 47,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d918e6a7-e89a-479e-b5b7-1d9b771abffd",
+      "name" : "salt@d918e6a7-e89a-479e-b5b7-1d9b771abffd",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 86,
+            "offset" : 22,
+            "additionalContext" : "org.bouncycastle.crypto.signers.PSSSigner#<init>(Lorg/bouncycastle/crypto/AsymmetricBlockCipher;Lorg/bouncycastle/crypto/Digest;I)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 32
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "86bff675-8b48-4862-905a-372925b00a6b",
+      "name" : "key@86bff675-8b48-4862-905a-372925b00a6b",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 39,
+            "offset" : 23
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 3072
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "905484ca-79e1-4760-a02d-a2847a79b7f7",
+      "name" : "RSA-PKCS1-1.5-SHA-1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 117,
+            "offset" : 22,
+            "additionalContext" : "org.bouncycastle.crypto.signers.RSADigestSigner#<init>(Lorg/bouncycastle/crypto/Digest;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 43,
+            "offset" : 16
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "signature",
+          "cryptoFunctions" : [
+            "sign"
+          ]
+        },
+        "oid" : "1.2.840.113549.1.1.5"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "37ea0074-b3ec-4a7e-a2e4-22607887c5f5",
+      "name" : "password@37ea0074-b3ec-4a7e-a2e4-22607887c5f5",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 160
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "7f50851e-e6e0-42d7-9f00-2f73d4428599",
+      "name" : "Blowfish",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 89,
+            "offset" : 35,
+            "additionalContext" : "org.bouncycastle.crypto.engines.BlowfishEngine#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "39b7931d-515c-41c6-b2c6-a84f36f134e6",
+      "name" : "salt@39b7931d-515c-41c6-b2c6-a84f36f134e6",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 136
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "13402560-712f-4a54-9963-00168f677ba2",
+      "name" : "Blowfish-CBC",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 89,
+            "offset" : 35,
+            "additionalContext" : "org.bouncycastle.crypto.engines.BlowfishEngine#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "mode" : "cbc"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "ed0cf789-ccbe-4880-81dc-03008a9b0c82",
+      "name" : "SHA-384",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaDigestDemo.java",
+            "line" : 26,
+            "offset" : 19
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 36,
+            "offset" : 18
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 75,
+            "offset" : 3,
+            "additionalContext" : "javax.net.ssl.SSLServerSocket#setEnabledCipherSuites([Ljava/lang/String;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 92,
+            "offset" : 3,
+            "additionalContext" : "javax.net.ssl.SSLServerSocket#setEnabledCipherSuites([Ljava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "384",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.2"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d812a028-6918-435f-b509-a665c94689ca",
+      "name" : "ECDSA-SHA-256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 58,
+            "offset" : 42,
+            "additionalContext" : "org.bouncycastle.crypto.signers.ECDSASigner#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 63,
+            "offset" : 44,
+            "additionalContext" : "org.bouncycastle.crypto.signers.ECDSASigner#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 35,
+            "offset" : 18
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "signature",
+          "cryptoFunctions" : [
+            "sign"
+          ]
+        },
+        "oid" : "1.2.840.10045.4.3.2"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "385e032c-1c6d-4ffb-a6f8-526a6a6983e6",
+      "name" : "RSA-PSS",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 86,
+            "offset" : 22,
+            "additionalContext" : "org.bouncycastle.crypto.signers.PSSSigner#<init>(Lorg/bouncycastle/crypto/AsymmetricBlockCipher;Lorg/bouncycastle/crypto/Digest;I)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 91,
+            "offset" : 24,
+            "additionalContext" : "org.bouncycastle.crypto.signers.PSSSigner#<init>(Lorg/bouncycastle/crypto/AsymmetricBlockCipher;Lorg/bouncycastle/crypto/Digest;I)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 86,
+            "offset" : 21,
+            "additionalContext" : "java.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 92,
+            "offset" : 23,
+            "additionalContext" : "java.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "signature",
+          "cryptoFunctions" : [
+            "sign"
+          ]
+        },
+        "oid" : "1.2.840.113549.1.1.10"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "6365266e-3f85-4502-8827-92456e78166a",
+      "name" : "key@6365266e-3f85-4502-8827-92456e78166a",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 37,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d6734182-46c4-4312-bfd9-55c9d01b3273",
+      "name" : "password@d6734182-46c4-4312-bfd9-55c9d01b3273",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 144
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "221629b3-2840-479b-9e4d-5699bfa9b6cf",
+      "name" : "RSA-2048",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 156,
+            "offset" : 18,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 169,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 64,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "parameterSetIdentifier" : "2048",
+          "mode" : "ecb",
+          "padding" : "pkcs1v15",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "9b4c5e6e-7032-4304-89f3-297f38793a7d",
+      "name" : "key@9b4c5e6e-7032-4304-89f3-297f38793a7d",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 36,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "58e8d6b5-c0ea-40f8-b320-909ba2b8f76f",
+      "name" : "PBES2",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKdfDemo.java",
+            "line" : 61,
+            "offset" : 45,
+            "additionalContext" : "org.bouncycastle.crypto.generators.PKCS5S2ParametersGenerator#<init>(Lorg/bouncycastle/crypto/Digest;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kdf"
+        },
+        "oid" : "1.2.840.113549.1.5"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "4e8b74e7-f214-451e-bd41-952b6372b542",
+      "name" : "key@4e8b74e7-f214-451e-bd41-952b6372b542",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 42,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "1dd02015-f22a-4428-b617-801f7fc88437",
+      "name" : "key@1dd02015-f22a-4428-b617-801f7fc88437",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 47,
+            "offset" : 23
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 1024
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e66c279f-82bc-480e-9ae9-f17821f7ff59",
+      "name" : "key@e66c279f-82bc-480e-9ae9-f17821f7ff59",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/gaps/ScannerGapDemo.java",
+            "line" : 136,
+            "offset" : 39,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "a033f73e-f768-492f-8988-b7b15bebe460",
+      "name" : "EC",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/gaps/ScannerGapDemo.java",
+            "line" : 150,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 42,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 68,
+            "offset" : 39,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 92,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 96,
+            "offset" : 26,
+            "additionalContext" : "java.security.KeyFactory#getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 47,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "08bf030d-6233-41e6-88ff-716cfced2df5",
+      "name" : "HMAC-SHA-256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 30,
+            "offset" : 12,
+            "additionalContext" : "javax.crypto.Mac#getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 31,
+            "offset" : 15,
+            "additionalContext" : "javax.crypto.spec.SecretKeySpec#<init>([BLjava/lang/String;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 24,
+            "offset" : 28
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 36,
+            "offset" : 22
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 44,
+            "offset" : 16,
+            "additionalContext" : "org.bouncycastle.crypto.macs.HMac#<init>(Lorg/bouncycastle/crypto/Digest;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "mac",
+          "cryptoFunctions" : [
+            "tag"
+          ]
+        },
+        "oid" : "1.2.840.113549.2.9"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "5a4184c4-ef37-491b-8a3a-4e31c465c264",
+      "name" : "key@5a4184c4-ef37-491b-8a3a-4e31c465c264",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 39,
+            "offset" : 20
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "30c522c6-1066-44b3-b54c-4d84faf245f0",
+      "name" : "key@30c522c6-1066-44b3-b54c-4d84faf245f0",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 43,
+            "offset" : 16
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "0ed7a978-14a0-4e32-a59e-9ad32f303fe7",
+      "name" : "iv@0ed7a978-14a0-4e32-a59e-9ad32f303fe7",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 55,
+            "offset" : 44,
+            "additionalContext" : "javax.crypto.spec.GCMParameterSpec#<init>(I[B)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "initialization-vector",
+          "size" : 96
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "55fe380b-511e-4cfa-91a9-6f82a4edbc1b",
+      "name" : "key@55fe380b-511e-4cfa-91a9-6f82a4edbc1b",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 37,
+            "offset" : 16
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "7a1f55ae-e60b-434e-87c0-95d6e991c9aa",
+      "name" : "3DES-200",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 54,
+            "offset" : 29,
+            "additionalContext" : "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "200",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d330e47a-2c6e-4bbd-847b-6cfd334a56ae",
+      "name" : "ML-KEM",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcPostQuantumDemo.java",
+            "line" : 68,
+            "offset" : 33,
+            "additionalContext" : "org.bouncycastle.pqc.crypto.mlkem.MLKEMGenerator#<init>(Ljava/security/SecureRandom;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcPostQuantumDemo.java",
+            "line" : 72,
+            "offset" : 33,
+            "additionalContext" : "org.bouncycastle.pqc.crypto.mlkem.MLKEMExtractor#<init>(Lorg/bouncycastle/pqc/crypto/mlkem/MLKEMPrivateKeyParameters;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kem",
+          "cryptoFunctions" : [
+            "encapsulate"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "9cfd384c-485b-4fe7-a5a3-8e091152ac65",
+      "name" : "Poly1305",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcAeadCipherDemo.java",
+            "line" : 71,
+            "offset" : 32,
+            "additionalContext" : "org.bouncycastle.crypto.modes.ChaCha20Poly1305#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 86,
+            "offset" : 19,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "4150dc85-8945-47ee-b4e5-3457e52101ea",
+      "name" : "key@4150dc85-8945-47ee-b4e5-3457e52101ea",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 37,
+            "offset" : 16
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "c2775e56-9e04-495b-8ee3-ca22901cc7c5",
+      "name" : "key@c2775e56-9e04-495b-8ee3-ca22901cc7c5",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 39,
+            "offset" : 20
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "83987de8-746e-4266-b552-22cdec7f9b56",
+      "name" : "AES",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcAeadCipherDemo.java",
+            "line" : 50,
+            "offset" : 49,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcAeadCipherDemo.java",
+            "line" : 57,
+            "offset" : 49,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcAeadCipherDemo.java",
+            "line" : 64,
+            "offset" : 51,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 163,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 50,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 56,
+            "offset" : 48,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 57,
+            "offset" : 31,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 65,
+            "offset" : 31,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "128"
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "85510646-31d2-445f-8444-6c13dcd0d9b5",
+      "name" : "CMAC-AES",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 50,
+            "offset" : 16,
+            "additionalContext" : "org.bouncycastle.crypto.macs.CMac#<init>(Lorg/bouncycastle/crypto/BlockCipher;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "mac",
+          "cryptoFunctions" : [
+            "tag"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d19611ef-190c-471b-b64a-0dc5e77c108d",
+      "name" : "key@d19611ef-190c-471b-b64a-0dc5e77c108d",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 169,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 2048
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "73cc9337-9bc3-4e4e-bdf7-1b794697cc1e",
+      "name" : "iv@73cc9337-9bc3-4e4e-bdf7-1b794697cc1e",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 75,
+            "offset" : 44,
+            "additionalContext" : "javax.crypto.spec.IvParameterSpec#<init>([B)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "initialization-vector",
+          "size" : 128
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "56136201-1625-4cf5-be37-2a8718fedb5f",
+      "name" : "SHA-256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 58,
+            "offset" : 61,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 63,
+            "offset" : 63,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 72,
+            "offset" : 42,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 77,
+            "offset" : 44,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 86,
+            "offset" : 53,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 91,
+            "offset" : 55,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 30,
+            "offset" : 12,
+            "additionalContext" : "javax.crypto.Mac#getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 31,
+            "offset" : 15,
+            "additionalContext" : "javax.crypto.spec.SecretKeySpec#<init>([BLjava/lang/String;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 24,
+            "offset" : 28
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaDigestDemo.java",
+            "line" : 25,
+            "offset" : 19
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 108,
+            "offset" : 18,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 36,
+            "offset" : 22
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKdfDemo.java",
+            "line" : 45,
+            "offset" : 60,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKdfDemo.java",
+            "line" : 53,
+            "offset" : 60,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKdfDemo.java",
+            "line" : 61,
+            "offset" : 76,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKdfDemo.java",
+            "line" : 69,
+            "offset" : 74,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 44,
+            "offset" : 25,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcDigestDemo.java",
+            "line" : 29,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA256Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 35,
+            "offset" : 18
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 37,
+            "offset" : 16
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 87,
+            "offset" : 26,
+            "additionalContext" : "java.security.spec.PSSParameterSpec#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;II)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 93,
+            "offset" : 28,
+            "additionalContext" : "java.security.spec.PSSParameterSpec#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;II)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "2806635e-6fd3-4475-b36a-209d49920a4b",
+      "name" : "password@2806635e-6fd3-4475-b36a-209d49920a4b",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 160
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3b40b1a2-3218-45bd-9b8e-770bba10b80a",
+      "name" : "3DES-CBC",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 128,
+            "offset" : 19,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "64",
+          "mode" : "cbc",
+          "padding" : "pkcs5",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f8eeadd6-7e4f-48eb-86ca-18e447b7dfb9",
+      "name" : "AES-128",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 100,
+            "offset" : 18,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 34,
+            "offset" : 22
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "other",
+          "parameterSetIdentifier" : "128",
+          "cryptoFunctions" : [
+            "encapsulate"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "dd9e2473-b5a5-43aa-9308-2116ac3fa7a0",
+      "name" : "3DES",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 124,
+            "offset" : 31,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "64",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3d4dc260-c09e-4d49-8628-ace1a454173b",
+      "name" : "key@3d4dc260-c09e-4d49-8628-ace1a454173b",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 35,
+            "offset" : 18
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "9105c013-9c3f-4f27-b5d2-18f01aa780bb",
+      "name" : "key@9105c013-9c3f-4f27-b5d2-18f01aa780bb",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 35,
+            "offset" : 22
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 256
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "326a1375-162a-4845-b95f-9c24baf6dee0",
+      "name" : "AES-128-ECB-PKCS5",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 116,
+            "offset" : 18,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "128",
+          "mode" : "ecb",
+          "padding" : "pkcs5",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "047a19b4-2115-49d2-83ac-0bff65a7bf58",
+      "name" : "key@047a19b4-2115-49d2-83ac-0bff65a7bf58",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 42,
+            "offset" : 24
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "7a966a48-ce47-4a3a-8b28-da7eea56f009",
+      "name" : "TLSv1.3",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 29,
+            "offset" : 23
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 89,
+            "offset" : 3,
+            "additionalContext" : "javax.net.ssl.SSLServerSocket#setEnabledProtocols([Ljava/lang/String;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 98,
+            "offset" : 3,
+            "additionalContext" : "javax.net.ssl.SSLParameters#setProtocols([Ljava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "protocol",
+        "protocolProperties" : {
+          "type" : "tls",
+          "version" : "1.3"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "b86859fb-c4dc-4c98-9deb-10da0b061f76",
+      "name" : "key@b86859fb-c4dc-4c98-9deb-10da0b061f76",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 24,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "4568807b-1f0b-4c90-b923-c2a2bfa1e850",
+      "name" : "TLSv1.2",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 30,
+            "offset" : 23
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 74,
+            "offset" : 3,
+            "additionalContext" : "javax.net.ssl.SSLServerSocket#setEnabledProtocols([Ljava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "protocol",
+        "protocolProperties" : {
+          "type" : "tls",
+          "version" : "1.2"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "728b5612-5a1e-4f7f-b79f-d283011e7383",
+      "name" : "TLS",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 34,
+            "offset" : 23
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 75,
+            "offset" : 3,
+            "additionalContext" : "javax.net.ssl.SSLServerSocket#setEnabledCipherSuites([Ljava/lang/String;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 92,
+            "offset" : 3,
+            "additionalContext" : "javax.net.ssl.SSLServerSocket#setEnabledCipherSuites([Ljava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "protocol",
+        "protocolProperties" : {
+          "type" : "tls"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "dde74897-52f8-4af7-898f-8bf0cc961c93",
+      "name" : "TLSv1.1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 37,
+            "offset" : 23
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "protocol",
+        "protocolProperties" : {
+          "type" : "tls",
+          "version" : "1.1"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f75327ea-90fc-4b3c-8740-13e1f0a4c218",
+      "name" : "XDH",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 56,
+            "offset" : 39,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 61,
+            "offset" : 31,
+            "additionalContext" : "javax.crypto.KeyAgreement#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyAgreement;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "key-agree",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "6fad85c3-405d-40e8-99bc-045a79395405",
+      "name" : "HKDF-SHA-1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKdfDemo.java",
+            "line" : 77,
+            "offset" : 37,
+            "additionalContext" : "org.bouncycastle.crypto.generators.HKDFBytesGenerator#<init>(Lorg/bouncycastle/crypto/Digest;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kdf"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "226a81b7-a44c-49ec-b783-ca3828be0192",
+      "name" : "password@226a81b7-a44c-49ec-b783-ca3828be0192",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 144
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e9329aa4-11bc-4b4f-9730-e1664e778a5c",
+      "name" : "HMAC-SHA-1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 36,
+            "offset" : 28
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 35,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "mac",
+          "cryptoFunctions" : [
+            "keygen",
+            "tag"
+          ]
+        },
+        "oid" : "1.2.840.113549.2.7"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "65fcab5f-ba19-4d36-afab-0535b96cb63f",
+      "name" : "secret-key@65fcab5f-ba19-4d36-afab-0535b96cb63f",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 33,
+            "offset" : 22
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 256
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "4a640507-9b1b-448e-8091-bbc77b079350",
+      "name" : "iv@4a640507-9b1b-448e-8091-bbc77b079350",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 129,
+            "offset" : 45,
+            "additionalContext" : "javax.crypto.spec.IvParameterSpec#<init>([B)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "initialization-vector",
+          "size" : 64
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3ca93d13-5896-4dd9-bb99-afa905bfdc7d",
+      "name" : "AES-256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 163,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 33,
+            "offset" : 22
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "908b574f-e6f5-46fe-afdf-9485e833c510",
+      "name" : "key@908b574f-e6f5-46fe-afdf-9485e833c510",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 26,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "7c73763a-4113-4a8d-a78c-791eb27d9ebb",
+      "name" : "ML-KEM-768",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/gaps/ScannerGapDemo.java",
+            "line" : 136,
+            "offset" : 39,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 41,
+            "offset" : 24
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kem",
+          "parameterSetIdentifier" : "768",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.4.2"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d83133c1-1f0d-4145-ab41-28b2e025b5d7",
+      "name" : "salt@d83133c1-1f0d-4145-ab41-28b2e025b5d7",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 136
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "2a2b3012-c7a3-41d4-a196-261d26021705",
+      "name" : "key@2a2b3012-c7a3-41d4-a196-261d26021705",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 39,
+            "offset" : 20
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "0f55458a-de0c-4e6f-8cd9-9e2e19e92f85",
+      "name" : "FFDH-2048",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 73,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 91,
+            "offset" : 42,
+            "additionalContext" : "java.security.AlgorithmParameterGenerator#getInstance(Ljava/lang/String;)Ljava/security/AlgorithmParameterGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "parameterSetIdentifier" : "2048",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "1.2.840.113549.1.3.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "c83a4f05-8247-472d-b6c8-ebacbeaa6516",
+      "name" : "secret-key@c83a4f05-8247-472d-b6c8-ebacbeaa6516",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 163,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 128
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "82d9b38f-0468-4a13-a999-9db01483fbdc",
+      "name" : "HMAC-SHA3-256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 26,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "mac",
+          "cryptoFunctions" : [
+            "keygen",
+            "tag"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.14"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d2f6cb8e-74b7-4116-a833-4d67790b5824",
+      "name" : "salt@d2f6cb8e-74b7-4116-a833-4d67790b5824",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 136
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "66236f28-d10b-4e41-a54d-cc0dc2935e64",
+      "name" : "key@66236f28-d10b-4e41-a54d-cc0dc2935e64",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 24,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "710195f2-bc3f-4fcf-80f2-5c510e24c599",
+      "name" : "key@710195f2-bc3f-4fcf-80f2-5c510e24c599",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 38,
+            "offset" : 23
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 4096
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "6ba8ef24-b386-4381-884e-92a738c7e5a6",
+      "name" : "key@6ba8ef24-b386-4381-884e-92a738c7e5a6",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 56,
+            "offset" : 39,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "98a127cf-dfb9-4834-b702-e951135f986a",
+      "name" : "secret-key@98a127cf-dfb9-4834-b702-e951135f986a",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 32,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "afebf9d9-04e3-4d89-a089-24ed79098968",
+      "name" : "key@afebf9d9-04e3-4d89-a089-24ed79098968",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 35,
+            "offset" : 18
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "17b8d5b0-ab6d-4c7d-ba0f-35a2774d5027",
+      "name" : "PBKDF2",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kdf",
+          "cryptoFunctions" : [
+            "keyderive"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "062409af-04fb-4cec-8575-a335ca524cee",
+      "name" : "PBKDF2-HMAC-SHA-512",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 32,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kdf",
+          "cryptoFunctions" : [
+            "keyderive"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "c0f1e9c6-654a-4c9d-aea3-a506e63b4144",
+      "name" : "secret-key@c0f1e9c6-654a-4c9d-aea3-a506e63b4144",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 163,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 128
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "a2272596-eaec-44e5-a483-07f601584631",
+      "name" : "SHA3",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcDigestDemo.java",
+            "line" : 32,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA3Digest#<init>(I)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "7e45e134-de45-4388-b544-98d571f98538",
+      "name" : "Blowfish-CBC-PKCS7",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 89,
+            "offset" : 35,
+            "additionalContext" : "org.bouncycastle.crypto.engines.BlowfishEngine#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "mode" : "cbc",
+          "padding" : "pkcs7",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d83f1b07-3a10-42ef-8946-af3237eec4db",
+      "name" : "key@d83f1b07-3a10-42ef-8946-af3237eec4db",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 68,
+            "offset" : 39,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "8903ea18-5511-4ab4-9c22-d7c25ca1d9df",
+      "name" : "password@8903ea18-5511-4ab4-9c22-d7c25ca1d9df",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 144
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "7cf7638c-93cc-4ab2-b9a8-6c02bcc926e4",
+      "name" : "key@7cf7638c-93cc-4ab2-b9a8-6c02bcc926e4",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 36,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "58653e73-25ab-486f-8462-bd1c949b2d78",
+      "name" : "AES-CCM",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcAeadCipherDemo.java",
+            "line" : 57,
+            "offset" : 49,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "ae",
+          "parameterSetIdentifier" : "128",
+          "mode" : "ccm",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "1e986874-d84d-42a3-9690-1fc1e192c522",
+      "name" : "secret-key@1e986874-d84d-42a3-9690-1fc1e192c522",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 32,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "ea042364-0967-4057-b3f7-00d00d0b4b58",
+      "name" : "Ed25519",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 103,
+            "offset" : 22,
+            "additionalContext" : "org.bouncycastle.crypto.signers.Ed25519Signer#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 108,
+            "offset" : 24,
+            "additionalContext" : "org.bouncycastle.crypto.signers.Ed25519Signer#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 39,
+            "offset" : 20
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "signature",
+          "curve" : "Edwards25519",
+          "cryptoFunctions" : [
+            "sign"
+          ]
+        },
+        "oid" : "1.3.101.112"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e038cba0-ada9-4c0f-8e8e-7a4ae2432e96",
+      "name" : "SM3",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcDigestDemo.java",
+            "line" : 34,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SM3Digest#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "613654fa-c346-4802-9ee8-3c2fff672162",
+      "name" : "DESede-CBC-PKCS7",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 73,
+            "offset" : 35,
+            "additionalContext" : "org.bouncycastle.crypto.engines.DESedeEngine#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "64",
+          "mode" : "cbc",
+          "padding" : "pkcs7",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "99f7c2e2-9c20-4e0b-ab4f-55b83fbf8a33",
+      "name" : "secret-key@99f7c2e2-9c20-4e0b-ab4f-55b83fbf8a33",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 62,
+            "offset" : 26,
+            "additionalContext" : "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 64
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f442e438-6586-40a1-bff2-d6542eb2bea0",
+      "name" : "key@f442e438-6586-40a1-bff2-d6542eb2bea0",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 25,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "6b069416-5abe-4be7-94fa-1dfb794e1abf",
+      "name" : "key@6b069416-5abe-4be7-94fa-1dfb794e1abf",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/gaps/ScannerGapDemo.java",
+            "line" : 150,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "1db87ebf-4e01-4462-b530-84881f5014cb",
+      "name" : "key@1db87ebf-4e01-4462-b530-84881f5014cb",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "2e69802b-512c-4469-97c1-cd2867240fd5",
+      "name" : "KMAC",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 62,
+            "offset" : 16,
+            "additionalContext" : "org.bouncycastle.crypto.macs.KMAC#<init>(I[B)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e98c7d16-a743-4803-959a-5737bd8340f1",
+      "name" : "key@e98c7d16-a743-4803-959a-5737bd8340f1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 64,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 2048
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "5f9b2cf5-4d53-4791-967d-9097592c809d",
+      "name" : "key@5f9b2cf5-4d53-4791-967d-9097592c809d",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 42,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3e402183-2e03-495c-93cc-0a681c32512c",
+      "name" : "key@3e402183-2e03-495c-93cc-0a681c32512c",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 82,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 3072
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "31b61cf3-3d67-44a7-933b-eac818b12dfa",
+      "name" : "password@31b61cf3-3d67-44a7-933b-eac818b12dfa",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 144
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "b17702aa-4566-4210-ae3f-152a7fee50d9",
+      "name" : "key@b17702aa-4566-4210-ae3f-152a7fee50d9",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 124,
+            "offset" : 39,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d076e16e-356e-45dd-8b17-8ca27fa4d3c8",
+      "name" : "key@d076e16e-356e-45dd-8b17-8ca27fa4d3c8",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "915b37d8-899c-4006-bc2e-cb1b3aeba364",
+      "name" : "key@915b37d8-899c-4006-bc2e-cb1b3aeba364",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 41,
+            "offset" : 24
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "880897be-95b7-46f2-8740-304136a158b9",
+      "name" : "password@880897be-95b7-46f2-8740-304136a158b9",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 144
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f4bf7d3a-88c2-4302-b16b-89a86f970363",
+      "name" : "AES-CTR",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 65,
+            "offset" : 31,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "128",
+          "mode" : "ctr",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "0d7c782b-7062-4d84-af37-f30310447585",
+      "name" : "secret-key@0d7c782b-7062-4d84-af37-f30310447585",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 163,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 256
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "39ea17d2-33cb-42cf-8e68-b122e65297c6",
+      "name" : "key@39ea17d2-33cb-42cf-8e68-b122e65297c6",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3036c84d-3e37-4a16-9d30-a75122e436da",
+      "name" : "DES-56-CBC",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 144,
+            "offset" : 19,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 81,
+            "offset" : 35,
+            "additionalContext" : "org.bouncycastle.crypto.engines.DESEngine#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "56",
+          "mode" : "cbc",
+          "padding" : "pkcs5",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "91b68205-24f1-4ac6-9a54-5b649f1f7106",
+      "name" : "key@91b68205-24f1-4ac6-9a54-5b649f1f7106",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "106ba418-031b-4d58-8b89-decadf1c807e",
+      "name" : "password@106ba418-031b-4d58-8b89-decadf1c807e",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 144
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "88793816-3538-45a6-bdc1-f894cde63bba",
+      "name" : "salt@88793816-3538-45a6-bdc1-f894cde63bba",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 136
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d877fb64-e88d-422d-aa3a-19c77b653f42",
+      "name" : "iv@d877fb64-e88d-422d-aa3a-19c77b653f42",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 145,
+            "offset" : 45,
+            "additionalContext" : "javax.crypto.spec.IvParameterSpec#<init>([B)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "initialization-vector",
+          "size" : 64
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "1272fea8-955f-4e0d-84cf-b8e24549e1c4",
+      "name" : "secret-key@1272fea8-955f-4e0d-84cf-b8e24549e1c4",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 35,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "ea8e4122-bfe0-4698-9d29-e75f3e7b352a",
+      "name" : "unknown",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 56,
+            "offset" : 16,
+            "additionalContext" : "org.bouncycastle.crypto.macs.GMac#<init>(Lorg/bouncycastle/crypto/modes/GCMModeCipher;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "mac",
+          "mode" : "other",
+          "cryptoFunctions" : [
+            "tag"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "a6f61185-d9af-4f26-81bb-4f0c13118bb9",
+      "name" : "secret-key@a6f61185-d9af-4f26-81bb-4f0c13118bb9",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 34,
+            "offset" : 22
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 128
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "6ca80704-362c-47a0-b520-11f20fa5476f",
+      "name" : "key@6ca80704-362c-47a0-b520-11f20fa5476f",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 36,
+            "offset" : 18
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "1d6f67d3-266a-40cd-84ec-48b543f16260",
+      "name" : "salt@1d6f67d3-266a-40cd-84ec-48b543f16260",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 136
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "ccca00e9-1b0b-4567-8712-022e7028ee73",
+      "name" : "password@ccca00e9-1b0b-4567-8712-022e7028ee73",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 160
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "dc228d27-d9ed-4701-bc9e-3fe4b4ac313e",
+      "name" : "HMAC-SHA-512",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 25,
+            "offset" : 28
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 32,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "mac",
+          "cryptoFunctions" : [
+            "keygen",
+            "tag"
+          ]
+        },
+        "oid" : "1.2.840.113549.2.11"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "7d0cd467-2bfc-4e98-b3b2-6a6687a304aa",
+      "name" : "salt@7d0cd467-2bfc-4e98-b3b2-6a6687a304aa",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 136
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f870a24b-bcf6-4a85-a74f-26e6124f1f17",
+      "name" : "FFDH",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKeyAgreementDemo.java",
+            "line" : 70,
+            "offset" : 33,
+            "additionalContext" : "org.bouncycastle.crypto.agreement.DHBasicAgreement#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke"
+        },
+        "oid" : "1.2.840.113549.1.3.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "ca6ed451-2361-4737-81c3-52b37eb49e8f",
+      "name" : "key@ca6ed451-2361-4737-81c3-52b37eb49e8f",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 25,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "277c1d43-e561-46a6-869a-e1887fe65f6a",
+      "name" : "ECDSA-SHA-384",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 36,
+            "offset" : 18
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "signature",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "1.2.840.10045.4.3.3"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e667d203-722d-463e-97c3-0bc0220ba809",
+      "name" : "key@e667d203-722d-463e-97c3-0bc0220ba809",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 37,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "1c358bb5-d910-42c3-a4e3-d374e455d101",
+      "name" : "public-key@1c358bb5-d910-42c3-a4e3-d374e455d101",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 96,
+            "offset" : 26,
+            "additionalContext" : "java.security.KeyFactory#getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "public-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "91d00821-b50b-4249-9b63-54799c53bae2",
+      "name" : "password@91d00821-b50b-4249-9b63-54799c53bae2",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 160
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "2ea63859-7836-4afa-ada3-9a2bf5758afa",
+      "name" : "secret-key@2ea63859-7836-4afa-ada3-9a2bf5758afa",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 31,
+            "offset" : 15,
+            "additionalContext" : "javax.crypto.spec.SecretKeySpec#<init>([BLjava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 256
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "4809776f-498c-40d2-8bc7-77a39dd1dfe2",
+      "name" : "AES-CBC",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 57,
+            "offset" : 31,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "128",
+          "mode" : "cbc"
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "45223e5b-392b-49af-84a4-cd8c422b8d82",
+      "name" : "AES-128-CTR",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 74,
+            "offset" : 18,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "128",
+          "mode" : "ctr",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3dfe75a5-3551-4bd0-b170-4dec50ebe611",
+      "name" : "SHA-512",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 103,
+            "offset" : 22,
+            "additionalContext" : "org.bouncycastle.crypto.signers.Ed25519Signer#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 108,
+            "offset" : 24,
+            "additionalContext" : "org.bouncycastle.crypto.signers.Ed25519Signer#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 25,
+            "offset" : 28
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaDigestDemo.java",
+            "line" : 27,
+            "offset" : 19
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 32,
+            "offset" : 19
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcDigestDemo.java",
+            "line" : 31,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA512Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 39,
+            "offset" : 20
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "512",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.3"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "27b740d0-c321-4100-bb4c-68a35e211649",
+      "name" : "MD5",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 37,
+            "offset" : 28
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaDigestDemo.java",
+            "line" : 33,
+            "offset" : 19
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 68,
+            "offset" : 25,
+            "additionalContext" : "org.bouncycastle.crypto.digests.MD5Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcDigestDemo.java",
+            "line" : 38,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.digests.MD5Digest#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "128",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "cc3e2768-a2ca-4009-b3ff-74610f87eaeb",
+      "name" : "EC-secp256r1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/gaps/ScannerGapDemo.java",
+            "line" : 151,
+            "offset" : 34,
+            "additionalContext" : "java.security.spec.ECGenParameterSpec#<init>(Ljava/lang/String;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 33,
+            "offset" : 17
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 93,
+            "offset" : 34,
+            "additionalContext" : "java.security.spec.ECGenParameterSpec#<init>(Ljava/lang/String;)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 35,
+            "offset" : 37
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "curve" : "secp256r1",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d29c8582-8419-447f-8883-12a1cf4f892b",
+      "name" : "ECDH",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 47,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.KeyAgreement#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyAgreement;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKeyAgreementDemo.java",
+            "line" : 39,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.agreement.ECDHBasicAgreement#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKeyAgreementDemo.java",
+            "line" : 40,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.agreement.ECDHCBasicAgreement#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/tls/TlsConfigurationDemo.java",
+            "line" : 75,
+            "offset" : 3,
+            "additionalContext" : "javax.net.ssl.SSLServerSocket#setEnabledCipherSuites([Ljava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "key-agree"
+        },
+        "oid" : "1.3.132.1.12"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "5755dd49-eed7-4a0d-ba9d-70ff9f5e6ffe",
+      "name" : "SHA-1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 117,
+            "offset" : 42,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA1Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 36,
+            "offset" : 28
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaDigestDemo.java",
+            "line" : 32,
+            "offset" : 19
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKdfDemo.java",
+            "line" : 77,
+            "offset" : 60,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA1Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 35,
+            "offset" : 19
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcDigestDemo.java",
+            "line" : 37,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA1Digest#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 43,
+            "offset" : 16
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "160",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "1.3.14.3.2.26"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3b40c846-bfc1-4004-8ca3-955f722318c5",
+      "name" : "DES-64",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 62,
+            "offset" : 26,
+            "additionalContext" : "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "64",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "facd9286-3a17-4eb8-8480-f1437bc51138",
+      "name" : "EC-secp521r1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 40,
+            "offset" : 23
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "curve" : "secp521r1",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f12aa8b0-cd8d-448a-9040-b5b50db8a1a1",
+      "name" : "DESede",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 73,
+            "offset" : 35,
+            "additionalContext" : "org.bouncycastle.crypto.engines.DESedeEngine#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "64"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "45b79e6c-44bc-4516-8f45-992c99a16bac",
+      "name" : "iv@45b79e6c-44bc-4516-8f45-992c99a16bac",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 65,
+            "offset" : 44,
+            "additionalContext" : "javax.crypto.spec.IvParameterSpec#<init>([B)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "initialization-vector",
+          "size" : 128
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "440308b4-68de-4d57-bbc8-d7560592de06",
+      "name" : "iv@440308b4-68de-4d57-bbc8-d7560592de06",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 87,
+            "offset" : 45,
+            "additionalContext" : "javax.crypto.spec.IvParameterSpec#<init>([B)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "initialization-vector",
+          "size" : 96
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "470de983-f001-427c-b9e4-4b1454e6deb0",
+      "name" : "key@470de983-f001-427c-b9e4-4b1454e6deb0",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyAgreementDemo.java",
+            "line" : 42,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f64f9b4d-73f4-4b1e-8d96-94d42dbccd78",
+      "name" : "DES-56",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 140,
+            "offset" : 31,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 81,
+            "offset" : 35,
+            "additionalContext" : "org.bouncycastle.crypto.engines.DESEngine#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "56",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "132a0e7d-0cb9-4865-ab45-744908f42436",
+      "name" : "key@132a0e7d-0cb9-4865-ab45-744908f42436",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 43,
+            "offset" : 16
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f1201955-b31e-418d-b230-6f273d1abd32",
+      "name" : "salt@f1201955-b31e-418d-b230-6f273d1abd32",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 91,
+            "offset" : 24,
+            "additionalContext" : "org.bouncycastle.crypto.signers.PSSSigner#<init>(Lorg/bouncycastle/crypto/AsymmetricBlockCipher;Lorg/bouncycastle/crypto/Digest;I)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 32
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "c0a4c92f-0240-49c8-bfaa-3f581de0f53f",
+      "name" : "key@c0a4c92f-0240-49c8-bfaa-3f581de0f53f",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/gaps/ScannerGapDemo.java",
+            "line" : 150,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d2f448dc-c938-4b39-aa3e-10a36ebeada3",
+      "name" : "key@d2f448dc-c938-4b39-aa3e-10a36ebeada3",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 64,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 3072
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "0a54b76f-7332-4574-a4aa-37900a9276bc",
+      "name" : "key@0a54b76f-7332-4574-a4aa-37900a9276bc",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 36,
+            "offset" : 22
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 256
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "1f098829-d2b4-4f46-9435-8616a4c10763",
+      "name" : "secret-key@1f098829-d2b4-4f46-9435-8616a4c10763",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3e8030fb-441a-41bc-b407-0013cc7ef0de",
+      "name" : "key@3e8030fb-441a-41bc-b407-0013cc7ef0de",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 24,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "58e66311-d29e-4844-bbf3-d54198b75f58",
+      "name" : "cSHAKE",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 62,
+            "offset" : 16,
+            "additionalContext" : "org.bouncycastle.crypto.macs.KMAC#<init>(I[B)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "xof",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "0906db0b-93ed-4fb3-9790-1ed72b0d84c9",
+      "name" : "BLAKE2b",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcDigestDemo.java",
+            "line" : 33,
+            "offset" : 21,
+            "additionalContext" : "org.bouncycastle.crypto.digests.Blake2bDigest#<init>(I)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3c40f4da-f8bb-40c9-8aaf-bd437c7e01aa",
+      "name" : "AES-CBC-PKCS7",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 57,
+            "offset" : 31,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "128",
+          "mode" : "cbc",
+          "padding" : "pkcs7",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "9f062441-1c0a-4ddb-8115-1de6f4ddf0af",
+      "name" : "RSA-OAEP",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 108,
+            "offset" : 18,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "parameterSetIdentifier" : "2048",
+          "mode" : "ecb",
+          "padding" : "oaep",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "1.2.840.113549.1.1.7"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "75969f48-489b-4a1b-9bc8-40a5dd93b82c",
+      "name" : "salt@75969f48-489b-4a1b-9bc8-40a5dd93b82c",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 136
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "c9434eee-afce-4a78-9684-ac7dc350f422",
+      "name" : "HMAC",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "mac",
+          "cryptoFunctions" : [
+            "tag"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e94a6920-3bac-4ad0-a580-7cdad40ed56a",
+      "name" : "RSA-3072",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 169,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 39,
+            "offset" : 23
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 64,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 82,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "pke",
+          "parameterSetIdentifier" : "3072",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3e451b9e-6e80-4f99-8350-96b507917fc7",
+      "name" : "PBKDF2-HMAC-SHA-256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 31,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kdf",
+          "cryptoFunctions" : [
+            "keyderive"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "7f4c813f-e13c-4648-a037-c5103ecd34bf",
+      "name" : "PKCS12",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKdfDemo.java",
+            "line" : 69,
+            "offset" : 44,
+            "additionalContext" : "org.bouncycastle.crypto.generators.PKCS12ParametersGenerator#<init>(Lorg/bouncycastle/crypto/Digest;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kdf"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "b05bf3be-ba1d-4f27-a8b0-3b78a252e4b5",
+      "name" : "ML-DSA",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcPostQuantumDemo.java",
+            "line" : 86,
+            "offset" : 27,
+            "additionalContext" : "org.bouncycastle.pqc.crypto.mldsa.MLDSASigner#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcPostQuantumDemo.java",
+            "line" : 91,
+            "offset" : 29,
+            "additionalContext" : "org.bouncycastle.pqc.crypto.mldsa.MLDSASigner#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "signature",
+          "cryptoFunctions" : [
+            "sign"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "7cb4410f-1836-4147-8632-22cf4e360856",
+      "name" : "salt@7cb4410f-1836-4147-8632-22cf4e360856",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyDerivationDemo.java",
+            "line" : 43,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 136
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "6530d8ec-af5c-410a-b974-ae0715fa651b",
+      "name" : "key@6530d8ec-af5c-410a-b974-ae0715fa651b",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 37,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e19bdf87-ad39-4f22-b8f2-c3b0e3a11b6d",
+      "name" : "key@e19bdf87-ad39-4f22-b8f2-c3b0e3a11b6d",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 47,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "88647c8e-4c2b-41ce-9461-b554a8e2fece",
+      "name" : "key@88647c8e-4c2b-41ce-9461-b554a8e2fece",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 47,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "02cb9ba9-4566-4d5c-9525-1b473d47ab57",
+      "name" : "HMAC-MD5",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 37,
+            "offset" : 28
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcMacDemo.java",
+            "line" : 68,
+            "offset" : 16,
+            "additionalContext" : "org.bouncycastle.crypto.macs.HMac#<init>(Lorg/bouncycastle/crypto/Digest;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "mac",
+          "cryptoFunctions" : [
+            "keygen",
+            "tag"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "45a18c68-81ae-402c-bf2d-8ce389815e1d",
+      "name" : "key@45a18c68-81ae-402c-bf2d-8ce389815e1d",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 35,
+            "offset" : 18
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3d88cee5-5cdb-4a2d-b350-5f7620e043f3",
+      "name" : "ECDSA",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 58,
+            "offset" : 42,
+            "additionalContext" : "org.bouncycastle.crypto.signers.ECDSASigner#<init>()V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcSignerDemo.java",
+            "line" : 63,
+            "offset" : 44,
+            "additionalContext" : "org.bouncycastle.crypto.signers.ECDSASigner#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "signature"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "44716149-920b-47ee-b70b-8385988d19a4",
+      "name" : "key@44716149-920b-47ee-b70b-8385988d19a4",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 37,
+            "offset" : 16
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "42bf977c-a8a2-4220-afc0-41328118070d",
+      "name" : "SHA3-512",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaDigestDemo.java",
+            "line" : 29,
+            "offset" : 19
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "512",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.10"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "eb464764-6317-4978-9774-96f88d31ce91",
+      "name" : "MGF1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 108,
+            "offset" : 18,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 87,
+            "offset" : 26,
+            "additionalContext" : "java.security.spec.PSSParameterSpec#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;II)V"
+          },
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaSignatureDemo.java",
+            "line" : 93,
+            "offset" : 28,
+            "additionalContext" : "java.security.spec.PSSParameterSpec#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;II)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "other"
+        },
+        "oid" : "1.2.840.113549.1.1.8"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "9b36462e-1e1e-4069-b1f5-5951e0dd471a",
+      "name" : "secret-key@9b36462e-1e1e-4069-b1f5-5951e0dd471a",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 140,
+            "offset" : 31,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "de5fbe05-9907-4256-a4fb-011ac0e4969c",
+      "name" : "secret-key@de5fbe05-9907-4256-a4fb-011ac0e4969c",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaCipherDemo.java",
+            "line" : 163,
+            "offset" : 30,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 128
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "129f5fdb-18fa-4b88-b56e-076803f8e42a",
+      "name" : "key@129f5fdb-18fa-4b88-b56e-076803f8e42a",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 92,
+            "offset" : 38,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "68040b7b-11b2-4a3d-95cb-b6316d685878",
+      "name" : "AES-GCM-SIV",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcAeadCipherDemo.java",
+            "line" : 64,
+            "offset" : 51,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#newInstance()Lorg/bouncycastle/crypto/MultiBlockCipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "ae",
+          "parameterSetIdentifier" : "128",
+          "mode" : "other",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "a23335e0-33c1-4368-8205-bd22eff01f07",
+      "name" : "KDF2",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcKdfDemo.java",
+            "line" : 53,
+            "offset" : 37,
+            "additionalContext" : "org.bouncycastle.crypto.generators.KDF2BytesGenerator#<init>(Lorg/bouncycastle/crypto/Digest;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kdf"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "f457f909-2d5d-45c6-8e3b-86f79dd1a6e4",
+      "name" : "ChaCha20-Poly1305",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcAeadCipherDemo.java",
+            "line" : 71,
+            "offset" : 32,
+            "additionalContext" : "org.bouncycastle.crypto.modes.ChaCha20Poly1305#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "ae",
+          "cryptoFunctions" : [
+            "encrypt"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "13a37028-7b87-4a26-bfef-f355ed2cbee5",
+      "name" : "key@13a37028-7b87-4a26-bfef-f355ed2cbee5",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaKeyGenerationDemo.java",
+            "line" : 68,
+            "offset" : 39,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d894779b-a8b3-4ecd-a97f-b905e488b134",
+      "name" : "key@d894779b-a8b3-4ecd-a97f-b905e488b134",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/jca/JcaMacDemo.java",
+            "line" : 26,
+            "offset" : 28
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "3d60cdb7-8434-4d0e-a824-19be99750fdb",
+      "name" : "DESede-CBC",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/com/tinnapat/demo/cbom/bc/BcBlockCipherDemo.java",
+            "line" : 73,
+            "offset" : 35,
+            "additionalContext" : "org.bouncycastle.crypto.engines.DESedeEngine#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "64",
+          "mode" : "cbc"
+        }
+      }
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "1f098829-d2b4-4f46-9435-8616a4c10763",
+      "dependsOn" : [
+        "7cb4410f-1836-4147-8632-22cf4e360856",
+        "3e451b9e-6e80-4f99-8350-96b507917fc7",
+        "2806635e-6fd3-4475-b36a-209d49920a4b"
+      ]
+    },
+    {
+      "ref" : "88647c8e-4c2b-41ce-9461-b554a8e2fece",
+      "dependsOn" : [
+        "311a7510-754c-43a0-8b0f-112f489c033b"
+      ]
+    },
+    {
+      "ref" : "c76472ef-3c63-4f73-a10f-05a1e5bbd45d",
+      "dependsOn" : [
+        "277c1d43-e561-46a6-869a-e1887fe65f6a"
+      ]
+    },
+    {
+      "ref" : "4150dc85-8945-47ee-b4e5-3457e52101ea",
+      "dependsOn" : [
+        "ee1f541f-99fe-4a85-a49b-59033dad54f4"
+      ]
+    },
+    {
+      "ref" : "0a54b76f-7332-4574-a4aa-37900a9276bc",
+      "dependsOn" : [
+        "08bf030d-6233-41e6-88ff-716cfced2df5"
+      ]
+    },
+    {
+      "ref" : "e9948e91-d799-4dbe-bf1f-c5a2bac467ef",
+      "dependsOn" : [
+        "440308b4-68de-4d57-bbc8-d7560592de06",
+        "9cfd384c-485b-4fe7-a5a3-8e091152ac65"
+      ]
+    },
+    {
+      "ref" : "710195f2-bc3f-4fcf-80f2-5c510e24c599",
+      "dependsOn" : [
+        "e46678bc-1b7e-4c04-b052-dcdddc62b94f"
+      ]
+    },
+    {
+      "ref" : "d2f448dc-c938-4b39-aa3e-10a36ebeada3",
+      "dependsOn" : [
+        "e94a6920-3bac-4ad0-a580-7cdad40ed56a"
+      ]
+    },
+    {
+      "ref" : "d894779b-a8b3-4ecd-a97f-b905e488b134",
+      "dependsOn" : [
+        "82d9b38f-0468-4a13-a999-9db01483fbdc"
+      ]
+    },
+    {
+      "ref" : "91d00821-b50b-4249-9b63-54799c53bae2",
+      "dependsOn" : [
+        "431e51af-5db7-498b-9b55-f0f54b3d7094"
+      ]
+    },
+    {
+      "ref" : "82b29db6-843b-44a0-8225-3c2e53e0b7b5",
+      "dependsOn" : [
+        "b02f8b2c-f76a-4aba-9647-8fa697425c89",
+        "ed0cf789-ccbe-4880-81dc-03008a9b0c82"
+      ]
+    },
+    {
+      "ref" : "5ddec7a5-5fd3-47ce-af7d-ea06f7896929",
+      "dependsOn" : [
+        "e9329aa4-11bc-4b4f-9730-e1664e778a5c"
+      ]
+    },
+    {
+      "ref" : "30c522c6-1066-44b3-b54c-4d84faf245f0",
+      "dependsOn" : [
+        "905484ca-79e1-4760-a02d-a2847a79b7f7"
+      ]
+    },
+    {
+      "ref" : "e9329aa4-11bc-4b4f-9730-e1664e778a5c",
+      "dependsOn" : [
+        "5755dd49-eed7-4a0d-ba9d-70ff9f5e6ffe"
+      ]
+    },
+    {
+      "ref" : "9d8c9f43-2849-4eae-be72-336235cbd1ed",
+      "dependsOn" : [
+        "dc228d27-d9ed-4701-bc9e-3fe4b4ac313e"
+      ]
+    },
+    {
+      "ref" : "86bff675-8b48-4862-905a-372925b00a6b",
+      "dependsOn" : [
+        "e94a6920-3bac-4ad0-a580-7cdad40ed56a"
+      ]
+    },
+    {
+      "ref" : "3d4dc260-c09e-4d49-8628-ace1a454173b",
+      "dependsOn" : [
+        "d812a028-6918-435f-b509-a665c94689ca"
+      ]
+    },
+    {
+      "ref" : "470de983-f001-427c-b9e4-4b1454e6deb0",
+      "dependsOn" : [
+        "311a7510-754c-43a0-8b0f-112f489c033b"
+      ]
+    },
+    {
+      "ref" : "da353bc7-9fb6-4701-ae98-996ec64a0203",
+      "dependsOn" : [
+        "d076e16e-356e-45dd-8b17-8ca27fa4d3c8"
+      ]
+    },
+    {
+      "ref" : "eb464764-6317-4978-9774-96f88d31ce91",
+      "dependsOn" : [
+        "56136201-1625-4cf5-be37-2a8718fedb5f"
+      ]
+    },
+    {
+      "ref" : "1dd02015-f22a-4428-b617-801f7fc88437",
+      "dependsOn" : [
+        "590b4f56-5f24-4cec-8651-419399a1e0ba"
+      ]
+    },
+    {
+      "ref" : "e66c279f-82bc-480e-9ae9-f17821f7ff59",
+      "dependsOn" : [
+        "7c73763a-4113-4a8d-a78c-791eb27d9ebb"
+      ]
+    },
+    {
+      "ref" : "6e09f030-05d5-4cb1-9d7a-a18224edb7fd",
+      "dependsOn" : [
+        "7a1f55ae-e60b-434e-87c0-95d6e991c9aa"
+      ]
+    },
+    {
+      "ref" : "43d2067f-71fa-4dcb-93b4-00924e8ae2c6",
+      "dependsOn" : [
+        "e9329aa4-11bc-4b4f-9730-e1664e778a5c"
+      ]
+    },
+    {
+      "ref" : "3e451b9e-6e80-4f99-8350-96b507917fc7",
+      "dependsOn" : [
+        "08bf030d-6233-41e6-88ff-716cfced2df5"
+      ]
+    },
+    {
+      "ref" : "28c0e09a-1780-4eef-aeec-51b5581010f3",
+      "dependsOn" : [
+        "0ed7a978-14a0-4e32-a59e-9ad32f303fe7"
+      ]
+    },
+    {
+      "ref" : "3036c84d-3e37-4a16-9d30-a75122e436da",
+      "dependsOn" : [
+        "d877fb64-e88d-422d-aa3a-19c77b653f42"
+      ]
+    },
+    {
+      "ref" : "129f5fdb-18fa-4b88-b56e-076803f8e42a",
+      "dependsOn" : [
+        "a033f73e-f768-492f-8988-b7b15bebe460"
+      ]
+    },
+    {
+      "ref" : "431e51af-5db7-498b-9b55-f0f54b3d7094",
+      "dependsOn" : [
+        "17b8d5b0-ab6d-4c7d-ba0f-35a2774d5027"
+      ]
+    },
+    {
+      "ref" : "6365266e-3f85-4502-8827-92456e78166a",
+      "dependsOn" : [
+        "02cb9ba9-4566-4d5c-9525-1b473d47ab57"
+      ]
+    },
+    {
+      "ref" : "85510646-31d2-445f-8444-6c13dcd0d9b5",
+      "dependsOn" : [
+        "83987de8-746e-4266-b552-22cdec7f9b56"
+      ]
+    },
+    {
+      "ref" : "c2775e56-9e04-495b-8ee3-ca22901cc7c5",
+      "dependsOn" : [
+        "ea042364-0967-4057-b3f7-00d00d0b4b58"
+      ]
+    },
+    {
+      "ref" : "a23335e0-33c1-4368-8205-bd22eff01f07",
+      "dependsOn" : [
+        "56136201-1625-4cf5-be37-2a8718fedb5f"
+      ]
+    },
+    {
+      "ref" : "f457f909-2d5d-45c6-8e3b-86f79dd1a6e4",
+      "dependsOn" : [
+        "9cfd384c-485b-4fe7-a5a3-8e091152ac65"
+      ]
+    },
+    {
+      "ref" : "7cf7638c-93cc-4ab2-b9a8-6c02bcc926e4",
+      "dependsOn" : [
+        "e9329aa4-11bc-4b4f-9730-e1664e778a5c"
+      ]
+    },
+    {
+      "ref" : "b17702aa-4566-4210-ae3f-152a7fee50d9",
+      "dependsOn" : [
+        "9e826b20-90aa-4f56-8eff-e792bb2cb622"
+      ]
+    },
+    {
+      "ref" : "45223e5b-392b-49af-84a4-cd8c422b8d82",
+      "dependsOn" : [
+        "73cc9337-9bc3-4e4e-bdf7-1b794697cc1e"
+      ]
+    },
+    {
+      "ref" : "5a4184c4-ef37-491b-8a3a-4e31c465c264",
+      "dependsOn" : [
+        "ea042364-0967-4057-b3f7-00d00d0b4b58"
+      ]
+    },
+    {
+      "ref" : "9b4c5e6e-7032-4304-89f3-297f38793a7d",
+      "dependsOn" : [
+        "e9329aa4-11bc-4b4f-9730-e1664e778a5c"
+      ]
+    },
+    {
+      "ref" : "91b68205-24f1-4ac6-9a54-5b649f1f7106",
+      "dependsOn" : [
+        "17b8d5b0-ab6d-4c7d-ba0f-35a2774d5027"
+      ]
+    },
+    {
+      "ref" : "02cb9ba9-4566-4d5c-9525-1b473d47ab57",
+      "dependsOn" : [
+        "27b740d0-c321-4100-bb4c-68a35e211649"
+      ]
+    },
+    {
+      "ref" : "c0a4c92f-0240-49c8-bfaa-3f581de0f53f",
+      "dependsOn" : [
+        "cc3e2768-a2ca-4009-b3ff-74610f87eaeb"
+      ]
+    },
+    {
+      "ref" : "1272fea8-955f-4e0d-84cf-b8e24549e1c4",
+      "dependsOn" : [
+        "d2f6cb8e-74b7-4116-a833-4d67790b5824",
+        "43d2067f-71fa-4dcb-93b4-00924e8ae2c6",
+        "8903ea18-5511-4ab4-9c22-d7c25ca1d9df"
+      ]
+    },
+    {
+      "ref" : "9f062441-1c0a-4ddb-8115-1de6f4ddf0af",
+      "dependsOn" : [
+        "eb464764-6317-4978-9774-96f88d31ce91",
+        "56136201-1625-4cf5-be37-2a8718fedb5f"
+      ]
+    },
+    {
+      "ref" : "17b8d5b0-ab6d-4c7d-ba0f-35a2774d5027",
+      "dependsOn" : [
+        "c9434eee-afce-4a78-9684-ac7dc350f422"
+      ]
+    },
+    {
+      "ref" : "2e69802b-512c-4469-97c1-cd2867240fd5",
+      "dependsOn" : [
+        "58e66311-d29e-4844-bbf3-d54198b75f58"
+      ]
+    },
+    {
+      "ref" : "7f4c813f-e13c-4648-a037-c5103ecd34bf",
+      "dependsOn" : [
+        "56136201-1625-4cf5-be37-2a8718fedb5f"
+      ]
+    },
+    {
+      "ref" : "f47bf9a6-8309-418f-a7d0-00da0d9e1313",
+      "dependsOn" : [
+        "56136201-1625-4cf5-be37-2a8718fedb5f"
+      ]
+    },
+    {
+      "ref" : "357e45ba-cc57-41f3-9af1-f3e6610e8966",
+      "dependsOn" : [
+        "ea042364-0967-4057-b3f7-00d00d0b4b58"
+      ]
+    },
+    {
+      "ref" : "39ea17d2-33cb-42cf-8e68-b122e65297c6",
+      "dependsOn" : [
+        "17b8d5b0-ab6d-4c7d-ba0f-35a2774d5027"
+      ]
+    },
+    {
+      "ref" : "57ae517c-02d6-410e-98a4-298f80173e3e",
+      "dependsOn" : [
+        "0f55458a-de0c-4e6f-8cd9-9e2e19e92f85"
+      ]
+    },
+    {
+      "ref" : "d19611ef-190c-471b-b64a-0dc5e77c108d",
+      "dependsOn" : [
+        "221629b3-2840-479b-9e4d-5699bfa9b6cf"
+      ]
+    },
+    {
+      "ref" : "277c1d43-e561-46a6-869a-e1887fe65f6a",
+      "dependsOn" : [
+        "ed0cf789-ccbe-4880-81dc-03008a9b0c82"
+      ]
+    },
+    {
+      "ref" : "5498a982-1082-4697-a9f3-9a00b0b2d7df",
+      "dependsOn" : [
+        "d29c8582-8419-447f-8883-12a1cf4f892b",
+        "b02f8b2c-f76a-4aba-9647-8fa697425c89",
+        "6fca114c-7e98-4c09-8d19-d02e21e8ef86"
+      ]
+    },
+    {
+      "ref" : "5b2585ac-b000-4a22-86b4-2e5976783447",
+      "dependsOn" : [
+        "e9948e91-d799-4dbe-bf1f-c5a2bac467ef"
+      ]
+    },
+    {
+      "ref" : "d812a028-6918-435f-b509-a665c94689ca",
+      "dependsOn" : [
+        "56136201-1625-4cf5-be37-2a8718fedb5f"
+      ]
+    },
+    {
+      "ref" : "5f9b2cf5-4d53-4791-967d-9097592c809d",
+      "dependsOn" : [
+        "a033f73e-f768-492f-8988-b7b15bebe460"
+      ]
+    },
+    {
+      "ref" : "2ea63859-7836-4afa-ada3-9a2bf5758afa",
+      "dependsOn" : [
+        "08bf030d-6233-41e6-88ff-716cfced2df5"
+      ]
+    },
+    {
+      "ref" : "6ca80704-362c-47a0-b520-11f20fa5476f",
+      "dependsOn" : [
+        "277c1d43-e561-46a6-869a-e1887fe65f6a"
+      ]
+    },
+    {
+      "ref" : "3b40b1a2-3218-45bd-9b8e-770bba10b80a",
+      "dependsOn" : [
+        "4a640507-9b1b-448e-8091-bbc77b079350"
+      ]
+    },
+    {
+      "ref" : "35cf3623-b598-4c48-b555-b5e66ace1b5a",
+      "dependsOn" : [
+        "ea042364-0967-4057-b3f7-00d00d0b4b58"
+      ]
+    },
+    {
+      "ref" : "6b069416-5abe-4be7-94fa-1dfb794e1abf",
+      "dependsOn" : [
+        "a033f73e-f768-492f-8988-b7b15bebe460"
+      ]
+    },
+    {
+      "ref" : "132a0e7d-0cb9-4865-ab45-744908f42436",
+      "dependsOn" : [
+        "905484ca-79e1-4760-a02d-a2847a79b7f7"
+      ]
+    },
+    {
+      "ref" : "1db87ebf-4e01-4462-b530-84881f5014cb",
+      "dependsOn" : [
+        "17b8d5b0-ab6d-4c7d-ba0f-35a2774d5027"
+      ]
+    },
+    {
+      "ref" : "82d9b38f-0468-4a13-a999-9db01483fbdc",
+      "dependsOn" : [
+        "53347226-54dd-4db2-873e-b9f68ff12c7b"
+      ]
+    },
+    {
+      "ref" : "6fca114c-7e98-4c09-8d19-d02e21e8ef86",
+      "dependsOn" : [
+        "ed0cf789-ccbe-4880-81dc-03008a9b0c82"
+      ]
+    },
+    {
+      "ref" : "8a92d78d-2636-4cf5-8bcd-247eb6fa29f6",
+      "dependsOn" : [
+        "277c1d43-e561-46a6-869a-e1887fe65f6a"
+      ]
+    },
+    {
+      "ref" : "e19bdf87-ad39-4f22-b8f2-c3b0e3a11b6d",
+      "dependsOn" : [
+        "a033f73e-f768-492f-8988-b7b15bebe460"
+      ]
+    },
+    {
+      "ref" : "ca6ed451-2361-4737-81c3-52b37eb49e8f",
+      "dependsOn" : [
+        "dc228d27-d9ed-4701-bc9e-3fe4b4ac313e"
+      ]
+    },
+    {
+      "ref" : "f442e438-6586-40a1-bff2-d6542eb2bea0",
+      "dependsOn" : [
+        "dc228d27-d9ed-4701-bc9e-3fe4b4ac313e"
+      ]
+    },
+    {
+      "ref" : "ee1f541f-99fe-4a85-a49b-59033dad54f4",
+      "dependsOn" : [
+        "56136201-1625-4cf5-be37-2a8718fedb5f"
+      ]
+    },
+    {
+      "ref" : "08bf030d-6233-41e6-88ff-716cfced2df5",
+      "dependsOn" : [
+        "56136201-1625-4cf5-be37-2a8718fedb5f"
+      ]
+    },
+    {
+      "ref" : "9105c013-9c3f-4f27-b5d2-18f01aa780bb",
+      "dependsOn" : [
+        "e9948e91-d799-4dbe-bf1f-c5a2bac467ef"
+      ]
+    },
+    {
+      "ref" : "48a07d2c-bc43-47c3-8084-712bf606eec8",
+      "dependsOn" : [
+        "cc3e2768-a2ca-4009-b3ff-74610f87eaeb"
+      ]
+    },
+    {
+      "ref" : "3e402183-2e03-495c-93cc-0a681c32512c",
+      "dependsOn" : [
+        "e94a6920-3bac-4ad0-a580-7cdad40ed56a"
+      ]
+    },
+    {
+      "ref" : "0d7c782b-7062-4d84-af37-f30310447585",
+      "dependsOn" : [
+        "3ca93d13-5896-4dd9-bb99-afa905bfdc7d"
+      ]
+    },
+    {
+      "ref" : "385e032c-1c6d-4ffb-a6f8-526a6a6983e6",
+      "dependsOn" : [
+        "6fca114c-7e98-4c09-8d19-d02e21e8ef86",
+        "d918e6a7-e89a-479e-b5b7-1d9b771abffd",
+        "56136201-1625-4cf5-be37-2a8718fedb5f",
+        "f1201955-b31e-418d-b230-6f273d1abd32",
+        "eb464764-6317-4978-9774-96f88d31ce91",
+        "93a0b6b0-b348-4681-87b6-91dc034f3257",
+        "e31856d8-39d1-4b15-b89d-636566574011"
+      ]
+    },
+    {
+      "ref" : "6d1641a6-2d38-412d-a5f5-a4b7763b1291",
+      "dependsOn" : [
+        "39b7931d-515c-41c6-b2c6-a84f36f134e6",
+        "43d2067f-71fa-4dcb-93b4-00924e8ae2c6",
+        "106ba418-031b-4d58-8b89-decadf1c807e"
+      ]
+    },
+    {
+      "ref" : "99f7c2e2-9c20-4e0b-ab4f-55b83fbf8a33",
+      "dependsOn" : [
+        "3b40c846-bfc1-4004-8ca3-955f722318c5"
+      ]
+    },
+    {
+      "ref" : "9d902dee-da8a-4dd3-b6a2-9066ca73910a",
+      "dependsOn" : [
+        "905484ca-79e1-4760-a02d-a2847a79b7f7"
+      ]
+    },
+    {
+      "ref" : "c0f1e9c6-654a-4c9d-aea3-a506e63b4144",
+      "dependsOn" : [
+        "83987de8-746e-4266-b552-22cdec7f9b56"
+      ]
+    },
+    {
+      "ref" : "d2716e16-73d8-4f21-aed2-8218d4d9837b",
+      "dependsOn" : [
+        "45b79e6c-44bc-4516-8f45-992c99a16bac"
+      ]
+    },
+    {
+      "ref" : "e667d203-722d-463e-97c3-0bc0220ba809",
+      "dependsOn" : [
+        "02cb9ba9-4566-4d5c-9525-1b473d47ab57"
+      ]
+    },
+    {
+      "ref" : "4e3af533-5757-4828-8fde-83a457cba985",
+      "dependsOn" : [
+        "e94a6920-3bac-4ad0-a580-7cdad40ed56a"
+      ]
+    },
+    {
+      "ref" : "67856e4e-1b08-4480-ae41-c70822b64b3d",
+      "dependsOn" : [
+        "dd9e2473-b5a5-43aa-9308-2116ac3fa7a0"
+      ]
+    },
+    {
+      "ref" : "915b37d8-899c-4006-bc2e-cb1b3aeba364",
+      "dependsOn" : [
+        "7c73763a-4113-4a8d-a78c-791eb27d9ebb"
+      ]
+    },
+    {
+      "ref" : "37ea0074-b3ec-4a7e-a2e4-22607887c5f5",
+      "dependsOn" : [
+        "91b68205-24f1-4ac6-9a54-5b649f1f7106"
+      ]
+    },
+    {
+      "ref" : "be628997-1207-426a-9004-12e305fc22b3",
+      "dependsOn" : [
+        "1d6f67d3-266a-40cd-84ec-48b543f16260",
+        "3e451b9e-6e80-4f99-8350-96b507917fc7",
+        "2cf68413-4c67-49d6-8b01-f53581eb30e6"
+      ]
+    },
+    {
+      "ref" : "9dcdcf35-8612-48ca-b705-7872bf5e538d",
+      "dependsOn" : [
+        "ea042364-0967-4057-b3f7-00d00d0b4b58"
+      ]
+    },
+    {
+      "ref" : "1e986874-d84d-42a3-9690-1fc1e192c522",
+      "dependsOn" : [
+        "88793816-3538-45a6-bdc1-f894cde63bba",
+        "062409af-04fb-4cec-8575-a335ca524cee",
+        "226a81b7-a44c-49ec-b783-ca3828be0192"
+      ]
+    },
+    {
+      "ref" : "45a18c68-81ae-402c-bf2d-8ce389815e1d",
+      "dependsOn" : [
+        "d812a028-6918-435f-b509-a665c94689ca"
+      ]
+    },
+    {
+      "ref" : "44716149-920b-47ee-b70b-8385988d19a4",
+      "dependsOn" : [
+        "ee1f541f-99fe-4a85-a49b-59033dad54f4"
+      ]
+    },
+    {
+      "ref" : "d83f1b07-3a10-42ef-8946-af3237eec4db",
+      "dependsOn" : [
+        "facd9286-3a17-4eb8-8480-f1437bc51138"
+      ]
+    },
+    {
+      "ref" : "6530d8ec-af5c-410a-b974-ae0715fa651b",
+      "dependsOn" : [
+        "02cb9ba9-4566-4d5c-9525-1b473d47ab57"
+      ]
+    },
+    {
+      "ref" : "a6f61185-d9af-4f26-81bb-4f0c13118bb9",
+      "dependsOn" : [
+        "f8eeadd6-7e4f-48eb-86ca-18e447b7dfb9"
+      ]
+    },
+    {
+      "ref" : "dc228d27-d9ed-4701-bc9e-3fe4b4ac313e",
+      "dependsOn" : [
+        "3dfe75a5-3551-4bd0-b170-4dec50ebe611"
+      ]
+    },
+    {
+      "ref" : "5891e29a-985d-4f59-82a3-badcd72ae151",
+      "dependsOn" : [
+        "cc3e2768-a2ca-4009-b3ff-74610f87eaeb"
+      ]
+    },
+    {
+      "ref" : "2a2b3012-c7a3-41d4-a196-261d26021705",
+      "dependsOn" : [
+        "ea042364-0967-4057-b3f7-00d00d0b4b58"
+      ]
+    },
+    {
+      "ref" : "ea042364-0967-4057-b3f7-00d00d0b4b58",
+      "dependsOn" : [
+        "3dfe75a5-3551-4bd0-b170-4dec50ebe611"
+      ]
+    },
+    {
+      "ref" : "079d7ef9-03cf-47d0-bb14-3bae10ca0b49",
+      "dependsOn" : [
+        "82d9b38f-0468-4a13-a999-9db01483fbdc"
+      ]
+    },
+    {
+      "ref" : "6ba8ef24-b386-4381-884e-92a738c7e5a6",
+      "dependsOn" : [
+        "f75327ea-90fc-4b3c-8740-13e1f0a4c218"
+      ]
+    },
+    {
+      "ref" : "66236f28-d10b-4e41-a54d-cc0dc2935e64",
+      "dependsOn" : [
+        "08bf030d-6233-41e6-88ff-716cfced2df5"
+      ]
+    },
+    {
+      "ref" : "6fad85c3-405d-40e8-99bc-045a79395405",
+      "dependsOn" : [
+        "5755dd49-eed7-4a0d-ba9d-70ff9f5e6ffe"
+      ]
+    },
+    {
+      "ref" : "728b5612-5a1e-4f7f-b79f-d283011e7383",
+      "dependsOn" : [
+        "728b5612-5a1e-4f7f-b79f-d283011e7383"
+      ]
+    },
+    {
+      "ref" : "c83a4f05-8247-472d-b6c8-ebacbeaa6516",
+      "dependsOn" : [
+        "83987de8-746e-4266-b552-22cdec7f9b56"
+      ]
+    },
+    {
+      "ref" : "c9434eee-afce-4a78-9684-ac7dc350f422",
+      "dependsOn" : [
+        "56136201-1625-4cf5-be37-2a8718fedb5f"
+      ]
+    },
+    {
+      "ref" : "58e8d6b5-c0ea-40f8-b320-909ba2b8f76f",
+      "dependsOn" : [
+        "56136201-1625-4cf5-be37-2a8718fedb5f"
+      ]
+    },
+    {
+      "ref" : "9cb59b27-7f63-4491-87e7-731cbaf1283c",
+      "dependsOn" : [
+        "58e66311-d29e-4844-bbf3-d54198b75f58"
+      ]
+    },
+    {
+      "ref" : "0906db0b-93ed-4fb3-9790-1ed72b0d84c9",
+      "dependsOn" : [
+        "d636cb6f-2d17-4c46-9519-7520c37751a8"
+      ]
+    },
+    {
+      "ref" : "afebf9d9-04e3-4d89-a089-24ed79098968",
+      "dependsOn" : [
+        "d812a028-6918-435f-b509-a665c94689ca"
+      ]
+    },
+    {
+      "ref" : "d076e16e-356e-45dd-8b17-8ca27fa4d3c8",
+      "dependsOn" : [
+        "17b8d5b0-ab6d-4c7d-ba0f-35a2774d5027"
+      ]
+    },
+    {
+      "ref" : "908b574f-e6f5-46fe-afdf-9485e833c510",
+      "dependsOn" : [
+        "82d9b38f-0468-4a13-a999-9db01483fbdc"
+      ]
+    },
+    {
+      "ref" : "13a37028-7b87-4a26-bfef-f355ed2cbee5",
+      "dependsOn" : [
+        "a033f73e-f768-492f-8988-b7b15bebe460"
+      ]
+    },
+    {
+      "ref" : "2806635e-6fd3-4475-b36a-209d49920a4b",
+      "dependsOn" : [
+        "1db87ebf-4e01-4462-b530-84881f5014cb"
+      ]
+    },
+    {
+      "ref" : "9b36462e-1e1e-4069-b1f5-5951e0dd471a",
+      "dependsOn" : [
+        "f64f9b4d-73f4-4b1e-8d96-94d42dbccd78"
+      ]
+    },
+    {
+      "ref" : "de5fbe05-9907-4256-a4fb-011ac0e4969c",
+      "dependsOn" : [
+        "83987de8-746e-4266-b552-22cdec7f9b56"
+      ]
+    },
+    {
+      "ref" : "062409af-04fb-4cec-8575-a335ca524cee",
+      "dependsOn" : [
+        "dc228d27-d9ed-4701-bc9e-3fe4b4ac313e"
+      ]
+    },
+    {
+      "ref" : "65fcab5f-ba19-4d36-afab-0535b96cb63f",
+      "dependsOn" : [
+        "3ca93d13-5896-4dd9-bb99-afa905bfdc7d"
+      ]
+    },
+    {
+      "ref" : "98a127cf-dfb9-4834-b702-e951135f986a",
+      "dependsOn" : [
+        "2bba398b-5c49-4cac-ba8e-9ceb70e951a4",
+        "062409af-04fb-4cec-8575-a335ca524cee",
+        "185f3854-2392-4c8e-90ec-2ff1c3745404"
+      ]
+    },
+    {
+      "ref" : "905484ca-79e1-4760-a02d-a2847a79b7f7",
+      "dependsOn" : [
+        "5755dd49-eed7-4a0d-ba9d-70ff9f5e6ffe"
+      ]
+    },
+    {
+      "ref" : "4e8b74e7-f214-451e-bd41-952b6372b542",
+      "dependsOn" : [
+        "cc3e2768-a2ca-4009-b3ff-74610f87eaeb"
+      ]
+    },
+    {
+      "ref" : "047a19b4-2115-49d2-83ac-0bff65a7bf58",
+      "dependsOn" : [
+        "9e826b20-90aa-4f56-8eff-e792bb2cb622"
+      ]
+    },
+    {
+      "ref" : "55fe380b-511e-4cfa-91a9-6f82a4edbc1b",
+      "dependsOn" : [
+        "ee1f541f-99fe-4a85-a49b-59033dad54f4"
+      ]
+    },
+    {
+      "ref" : "e98c7d16-a743-4803-959a-5737bd8340f1",
+      "dependsOn" : [
+        "221629b3-2840-479b-9e4d-5699bfa9b6cf"
+      ]
+    },
+    {
+      "ref" : "1c358bb5-d910-42c3-a4e3-d374e455d101",
+      "dependsOn" : [
+        "a033f73e-f768-492f-8988-b7b15bebe460"
+      ]
+    },
+    {
+      "ref" : "b86859fb-c4dc-4c98-9deb-10da0b061f76",
+      "dependsOn" : [
+        "08bf030d-6233-41e6-88ff-716cfced2df5"
+      ]
+    },
+    {
+      "ref" : "3e8030fb-441a-41bc-b407-0013cc7ef0de",
+      "dependsOn" : [
+        "08bf030d-6233-41e6-88ff-716cfced2df5"
+      ]
+    },
+    {
+      "ref" : "ccca00e9-1b0b-4567-8712-022e7028ee73",
+      "dependsOn" : [
+        "39ea17d2-33cb-42cf-8e68-b122e65297c6"
+      ]
+    }
+  ]
+}
